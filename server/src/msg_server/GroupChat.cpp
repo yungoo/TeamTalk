@@ -49,7 +49,7 @@ void CGroupChat::HandleClientGroupNormalRequest(CImPdu* pPdu, CMsgConn* pFromCon
     {
         log("no db connection. ");
         IM::Group::IMNormalGroupListRsp msg2;
-        msg.set_user_id(user_id);
+        msg2.set_user_id(user_id);
         CImPdu pdu;
         pdu.SetPBMsg(&msg2);
         pdu.SetServiceId(SID_GROUP);
